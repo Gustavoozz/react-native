@@ -1,9 +1,56 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, TouchableOpacity, TextInput } from 'react-native';
 import LoginImg from './src/assets/images/6681204.png'
+import AppLoading from 'expo-app-loading';
+import {
+  useFonts,
+  Poppins_100Thin,
+  Poppins_100Thin_Italic,
+  Poppins_200ExtraLight,
+  Poppins_200ExtraLight_Italic,
+  Poppins_300Light,
+  Poppins_300Light_Italic,
+  Poppins_400Regular,
+  Poppins_400Regular_Italic,
+  Poppins_500Medium,
+  Poppins_500Medium_Italic,
+  Poppins_600SemiBold,
+  Poppins_600SemiBold_Italic,
+  Poppins_700Bold,
+  Poppins_700Bold_Italic,
+  Poppins_800ExtraBold,
+  Poppins_800ExtraBold_Italic,
+  Poppins_900Black,
+  Poppins_900Black_Italic,
+} from '@expo-google-fonts/poppins';
 
 
 export default function App() {
+  let [fontsLoaded] = useFonts({
+    Poppins_100Thin,
+    Poppins_100Thin_Italic,
+    Poppins_200ExtraLight,
+    Poppins_200ExtraLight_Italic,
+    Poppins_300Light,
+    Poppins_300Light_Italic,
+    Poppins_400Regular,
+    Poppins_400Regular_Italic,
+    Poppins_500Medium,
+    Poppins_500Medium_Italic,
+    Poppins_600SemiBold,
+    Poppins_600SemiBold_Italic,
+    Poppins_700Bold,
+    Poppins_700Bold_Italic,
+    Poppins_800ExtraBold,
+    Poppins_800ExtraBold_Italic,
+    Poppins_900Black,
+    Poppins_900Black_Italic,
+  });
+
+
+  if (!fontsLoaded) {
+    return <AppLoading />;
+  } else {
   return (
     
     <View style={styles.container}>
@@ -40,6 +87,7 @@ export default function App() {
     </View>
   );
 }
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -64,14 +112,12 @@ const styles = StyleSheet.create({
   text: {
     color: 'black', 
     fontSize: 30, 
-    fontWeight: 'bold',
-
     textAlign: 'center', 
-    textTransform: 'uppercase',
-    fontFamily: 'Poppins',
-
+    fontFamily: 'Poppins_100Thin',
+    
     marginTop: 10,
     marginBottom: 20,
+   
   },
 
   input: {
@@ -113,6 +159,7 @@ const styles = StyleSheet.create({
     marginRight: 230,
     fontWeight: 'bold',
     fontSize: 18,
+    fontFamily: 'Poppins_100Thin',
   }
 
 });
