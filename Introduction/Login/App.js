@@ -32,7 +32,7 @@ export default function App() {
       </TextInput>
 
       <TouchableOpacity style={styles.button}>
-      <Text styles={styles.textButton}>ENTRAR</Text>
+      <Text style={styles.textButton}>ENTRAR</Text>
       </TouchableOpacity>
 
 
@@ -88,18 +88,23 @@ const styles = StyleSheet.create({
 
   button: {
     borderWidth: 2,
-    borderColor: 'black',
+    borderColor: 'white',
     marginTop: 10,
 
     width: '40%',
-    height: 30,
+    height: 40,
     backgroundColor: '#AB5CBF',
 
-    borderRadius: 7,
+    borderRadius: 9,
     marginTop: 50,
     justifyContent: 'center',
 
     alignItems: 'center',
+  },
+
+  textButton: {
+    fontWeight: 'bold',
+    color: 'white',
   },
 
   textUpper: {
@@ -108,7 +113,6 @@ const styles = StyleSheet.create({
     marginRight: 230,
     fontWeight: 'bold',
     fontSize: 18,
-
   }
 
 });
