@@ -1,6 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import { useEffect, useState } from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View, Image } from 'react-native';
+import { Container } from './src/components/Container/Container';
+import { Title, TitleIncrement } from './src/components/Title/Title';
+import { ButtonDecrement, ButtonIncrement } from './src/components/Button/Button';
+import clockImg from './src/assets/images/1_D3XUxilnSSx6XxIQ1QlCXA.gif';
+import { ImageClock } from './src/components/Image/Image';
 
 export default function App() {
 
@@ -16,6 +21,13 @@ export default function App() {
   //Função para decremento:
   const decrement = () => {
     setCount(count - 1)
+    if(count > 0)
+    {
+      setCount(count - 1)
+    }
+    else {
+      Alert.alert('Error!')
+    }
   };
 
 
@@ -24,61 +36,25 @@ export default function App() {
   }, [count])
 
   return (
-    <View style={styles.container}>
+    <Container>
 
-      <Text style={styles.count}>{count}</Text>
+   <ImageClock
+    source={clockImg}
+   />
 
-      <TouchableOpacity style={styles.buttonIncrement}onPress={increment}>
-        <Text style={styles.buttonText}>+</Text>
-      </TouchableOpacity>
 
-      <TouchableOpacity style={styles.button} onPress={decrement}>
-        <Text style={styles.buttonText}>-</Text>
-      </TouchableOpacity>
+    <Title>{count}</Title>
 
+      <ButtonIncrement onPress={increment}>
+      <TitleIncrement>+</TitleIncrement>
+      </ButtonIncrement>
+      
+      <ButtonDecrement onPress={decrement}>
+      <TitleIncrement>-</TitleIncrement>
+      </ButtonDecrement>
+        
       <StatusBar style="auto" />
-    </View>
+    </Container>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'black',
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: 10,
-  },
-
-  count: {
-    marginBottom: 20,
-    color: 'white',
-    fontSize: 30
-  },
-
-  text: {
-    color: 'white',
-    fontSize: 30,
-  },
-
-  button: {
-    backgroundColor: 'red',
-    width: '50%',
-    height: 30,
-    alignItems: 'center',
-    borderRadius: 8,
-  },
-
-  buttonIncrement: {
-    backgroundColor: 'green',
-    width: '50%',
-    height: 30,
-    alignItems: 'center',
-    borderRadius: 8,
-  },
-
-  buttonText: {
-    color: 'white',
-    fontSize: 18,
-  }
-});
