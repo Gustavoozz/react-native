@@ -9,7 +9,6 @@ import { ImageClock } from './src/components/Image/Image';
 
 export default function App() {
 
-
   // Hook de state:
   const [count, setCount] = useState(0)
 
@@ -30,13 +29,12 @@ export default function App() {
     }
   };
 
-
   useEffect(() => {
     console.warn(`Contador atualizado ${count}`)
-  }, [count])
+  }, [count]);
 
   return (
-    <Container>
+  <Container>
 
    <ImageClock
     source={clockImg}
@@ -54,7 +52,7 @@ export default function App() {
       </ButtonDecrement>
         
       <StatusBar style="auto" />
-    </Container>
+  </Container>
   );
 }
 
