@@ -10,11 +10,12 @@ import {
 
 import { ContainerApp } from './src/components/Container/ContainerApp';
 import { Header } from './src/components/Header';
-import DropShadow from "react-native-drop-shadow";
 import { Home } from './src/screens/Home';
 
 
+
 export default function App() {
+ 
   let [fontsLoaded] = useFonts({
     Roboto_500Medium,
     Roboto_700Bold
@@ -28,13 +29,12 @@ export default function App() {
   <ContainerApp>
   <StatusBar 
   backgroundColor={'transparent'} translucent
-  barStyle="dark-content"
+  barStyle="light-content"
   />
     
   {/* HEADER */}
   <Header />
     
-
   {/* HOMESCREEN */}
   <Home />
   

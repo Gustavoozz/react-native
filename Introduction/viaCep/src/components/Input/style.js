@@ -17,3 +17,4 @@ export const InputText = styled.TextInput`
         background-color: #F6F6F6;
     `}
 `
+

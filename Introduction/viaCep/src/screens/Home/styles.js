@@ -10,4 +10,9 @@ export const ContainerForm = styled.SafeAreaView`
     gap: 20px;
 `
 
+export const InputEstado = styled.View`
+    flex-direction: row;
+    justify-content: space-between;
+`
+
 

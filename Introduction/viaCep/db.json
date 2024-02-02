@@ -1,0 +1,12 @@
+{
+    "cep": [
+        {
+            "id" : "08954678",
+            "logradouro" : "Casa do chapéu",
+            "bairro" : "Bairro do chapéu",
+            "localidade" : "Chapéu",
+            "estado" : "São Paulo",
+            "uf" : "SP"
+        }
+    ]
+}
