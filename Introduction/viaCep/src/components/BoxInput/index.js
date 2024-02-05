@@ -22,7 +22,7 @@ export const BoxInput = ({
     placeholder={placeHolder}
     keyType={keyType}
     maxLength={maxLength}
-    value={fieldValue}
+    fieldValue={fieldValue}
     onChangeText={onChangeText}
     />
     </FieldContent>     

@@ -13,7 +13,6 @@ import { Header } from './src/components/Header';
 import { Home } from './src/screens/Home';
 
 
-
 export default function App() {
  
   let [fontsLoaded] = useFonts({
@@ -24,6 +23,8 @@ export default function App() {
   if (!fontsLoaded) {
     return <AppLoading />;
   } else {
+
+
 
   return (
   <ContainerApp>
