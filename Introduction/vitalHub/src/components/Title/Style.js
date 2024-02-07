@@ -15,5 +15,6 @@ export const ButtonTitle = styled.Text`
 `
 
 export const ButtonTitleGoogle = styled(ButtonTitle)`
-    color: #496BBA;
+    color: #496BBA;   
 `
+

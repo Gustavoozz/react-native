@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Logo = styled.Image`
-    width: 214px;
+    width: 70%;
     height: 120px;
-    margin: 20px 0px;
+    margin: 40px 0px;
 `
