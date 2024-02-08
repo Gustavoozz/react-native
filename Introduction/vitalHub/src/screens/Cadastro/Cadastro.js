@@ -6,7 +6,7 @@ import { Logo } from "../../components/Logo/Style";
 import { TextQuick } from "../../components/Text/Text";
 import { ButtonTitle, Title } from "../../components/Title/Style";
 
-export const Cadastro = () => {
+export const Cadastro = ({ navigation }) => {
     return(
         <Container>
              <Logo
@@ -36,7 +36,7 @@ export const Cadastro = () => {
                 <ButtonTitle>Cadastrar</ButtonTitle>
             </Button>
 
-            <TextReenviar>Cancelar</TextReenviar>
+            <TextReenviar onPress={() => navigation.navigate("Login")}>Cancelar</TextReenviar>
         </Container>
     );
 }

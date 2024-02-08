@@ -18,3 +18,16 @@ export const InputVerify = styled(Input)`
     padding: 0px;
     text-align: center;
 `
+
+export const InputUser = styled.TextInput`
+    width: 90%;
+    background-color: #F5F3F3;
+    border-radius: 5px;
+
+    height: 54px;
+    padding-left: 20px;
+`
+
+export const InputCity = styled(InputUser)`
+    width: 165px;
+`

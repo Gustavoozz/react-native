@@ -9,3 +9,8 @@ export const TextQuick = styled.Text`
     margin-bottom: 25px;
     width: 90%;
 `
+
+export const SubTextQuick = styled(TextQuick)`
+    font-size: 14px;
+    margin-bottom: 0px;
+`

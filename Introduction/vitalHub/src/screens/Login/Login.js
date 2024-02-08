@@ -7,7 +7,7 @@ import { Logo } from "../../components/Logo/Style";
 import { ButtonTitle, ButtonTitleGoogle, Title } from "../../components/Title/Style";
 import { ContentAccount } from "../../components/ContentAccount/Style";
 
-export const Login = () => {
+export const Login = ({ navigation }) => {
     return(
         <Container>
             <Logo
@@ -26,7 +26,7 @@ export const Login = () => {
             placeholderTextColor="#34898F"
             />
 
-            <LinkMedium>Esqueceu sua senha?</LinkMedium>
+            <LinkMedium onPress={() => navigation.navigate("RecuperarSenha")}>Esqueceu sua senha?</LinkMedium>
 
             <Button>
                 <ButtonTitle>Entrar</ButtonTitle>
@@ -38,7 +38,7 @@ export const Login = () => {
             </ButtonGoogle>
 
             <ContentAccount>
-                <TextAccount>Não tem conta? <TextReenviar>Crie uma conta agora!</TextReenviar></TextAccount>
+                <TextAccount>Não tem conta? <TextReenviar onPress={() => navigation.navigate("Cadastro")}>Crie uma conta agora!</TextReenviar></TextAccount>
             </ContentAccount>
         </Container>
     );

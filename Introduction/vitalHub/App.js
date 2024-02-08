@@ -12,6 +12,8 @@ import { RecuperarSenha } from './src/screens/RecuperarSenha/RecuperarSenha';
 import { VerificarSenha } from './src/screens/VerificarSenha/VerificarSenha';
 import { RedefinirSenha } from './src/screens/RedefinirSenha/RedefinirSenha';
 import { Cadastro } from './src/screens/Cadastro/Cadastro';
+import { Perfil } from './src/screens/Perfil/Perfil';
+import { MedicoConsultas } from './src/screens/MedicoConsultas/MedicoConsultas';
 
 
 const Stack = createNativeStackNavigator();
@@ -77,6 +79,18 @@ export default function App() {
             name="Cadastro"
             component={Cadastro}
             options={{title: "Cadastro"}}
+        />
+
+      <Stack.Screen
+            name="Perfil"
+            component={Perfil}
+            options={{title: "Perfil"}}
+        />
+
+      <Stack.Screen
+            name="MedicoConsultas"
+            component={MedicoConsultas}
+            options={{title: "MedicoConsultas"}}
         />
       </Stack.Navigator>  
     </NavigationContainer>

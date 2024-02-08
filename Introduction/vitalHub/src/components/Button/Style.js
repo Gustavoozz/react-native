@@ -12,6 +12,10 @@ export const Button = styled.TouchableOpacity`
     padding: 10px;
 `
 
+export const ButtonUser = styled(Button)`
+    margin-bottom: 40px;
+`
+
 export const ButtonGoogle = styled.TouchableOpacity`
     background-color: #FAFAFA;
     border: 1px solid #496BBA;

@@ -18,3 +18,15 @@ export const ButtonTitleGoogle = styled(ButtonTitle)`
     color: #496BBA;   
 `
 
+export const TitleUser = styled(Title)`
+    font-size: 16px;
+    margin-bottom: 10px;
+`
+
+export const LabelUser = styled(Title)`
+    font-family: 'Quicksand_600SemiBold';
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    width: 90%;
+`
