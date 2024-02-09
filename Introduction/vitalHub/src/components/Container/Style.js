@@ -7,10 +7,9 @@ export const Container = styled.SafeAreaView`
 `
 
 export const ContainerUser = styled.ScrollView`
-flex: 1;
-background-color: white;
+    flex: 1;
+    background-color: white;
 `
-
 
 export const InformationContent = styled.View`
     align-items: center;
@@ -26,6 +25,13 @@ export const InformationContent = styled.View`
     border-radius: 5px;
 
     height: 120px;
+`
+
+export const ContentProntuario = styled.View`
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    bottom: 30px;
 `
 
 export const PhotoContainer = styled.View`

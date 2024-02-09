@@ -7,9 +7,9 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/VitalHub_Splash2.png",
+      "image": "./assets/VitalHub_Splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#49B3BA"
+      "backgroundColor": "#ffffff"
     },
     "assetBundlePatterns": [
       "**/*"

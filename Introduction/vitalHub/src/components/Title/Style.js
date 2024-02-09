@@ -30,3 +30,7 @@ export const LabelUser = styled(Title)`
     margin-top: 30px;
     width: 90%;
 `
+
+export const LabelProntuario = styled(LabelUser)`
+    margin-top: 10px;
+`

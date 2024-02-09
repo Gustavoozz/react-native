@@ -6,7 +6,7 @@ import { SubTextQuick, TextQuick } from "../../components/Text/Text"
 import { InputCity, InputUser } from "../../components/Input/Style"
 import { Button, ButtonUser } from "../../components/Button/Style"
 
-export const Perfil = () => {
+export const Perfil = ({ navigation }) => {
     return(
         <ContainerUser contentContainerStyle={{flexGrow: 1, alignItems: 'center'}}>
             <PhotoContainer>
@@ -51,8 +51,16 @@ export const Perfil = () => {
             </View>
             </CityContainer>
 
-            <ButtonUser>
+            <Button>
             <ButtonTitle>Salvar</ButtonTitle>
+            </Button>
+
+            <Button onPress={() => navigation.navigate("Login")}>
+            <ButtonTitle>Editar</ButtonTitle>
+            </Button>
+
+            <ButtonUser>
+                <ButtonTitle>Sair do App</ButtonTitle>
             </ButtonUser>
         </ContainerUser>
     )

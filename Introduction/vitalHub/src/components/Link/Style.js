@@ -21,3 +21,7 @@ export const TextReenviar = styled(LinkMedium)`
     margin-top: 30px;
     color: #344F8F;
 `
+
+export const CancelText = styled(TextReenviar)`
+    margin-bottom: 30px;
+`

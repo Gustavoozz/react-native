@@ -31,3 +31,7 @@ export const InputUser = styled.TextInput`
 export const InputCity = styled(InputUser)`
     width: 165px;
 `
+
+export const InputProntuario = styled(Input)`
+    height: 121px;
+`
