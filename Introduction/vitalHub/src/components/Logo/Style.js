@@ -12,3 +12,18 @@ export const ArrowIcon = styled.TouchableOpacity`
     margin-right: 340px;
     top: 40px;
 `
+
+export const UserDoctor = styled.Image`
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+
+    margin-top: 30px;
+`
+
+export const NotificationBell = styled.Image`
+    width: 18px;
+    height: 18px;
+    margin-left: 160px;
+    margin-top: 60px;
+`

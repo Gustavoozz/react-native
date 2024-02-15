@@ -38,3 +38,21 @@ export const ButtonGoogle = styled.TouchableOpacity`
     justify-content: center;
     gap: 20px;
 `
+
+export const SelectButton = styled.TouchableOpacity`
+    width: 30%;
+    height: 45px;
+    border-radius: 5px;
+
+    background-color: #496BBA;
+    border: 1px solid #496BBA;
+    align-items: center;
+
+    margin-top: 20px;
+    justify-content: center;
+`
+
+export const WhiteSelectButton = styled(SelectButton)`
+    background-color: #FBFBFB;
+    border: 2px solid #607EC5;
+`

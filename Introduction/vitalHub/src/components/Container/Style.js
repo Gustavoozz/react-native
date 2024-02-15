@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { LinearGradient } from "expo-linear-gradient"
 
 export const Container = styled.SafeAreaView`
     flex: 1;
@@ -48,10 +49,39 @@ export const CityContainer = styled.View`
     gap: 35px;
 `
 
-export const MedicoContainer = styled.View`
-    width: 100%;
-    height: 144px;
-    background-color: linear-gradient(to bottom, #60BFC5, #496BBA);
-    border: 1px solid black;
-    border-radius: 0px 0px 15px 15px;
+export const HeaderHome = styled(LinearGradient).attrs({
+    colors: ['#60BFC5', '#496BBA'],
+    start: {x: -0.03, y: 1.5},
+    end: {x: 1, y:0}
+   })`
+   width: 100%;
+   border-radius: 0px 0px 15px 15px;
+   width: 100%;
+   height: 144px;
+   padding: 15px;
+   flex-direction: row;
+   `
+
+export const InfoContainer = styled.View`
+    padding: 0px;
+    justify-content: center;
+    padding: 5px;
+
+    width: 30%;
+    height: 30%;
+    margin-left: 10px;
+    margin-top: 50px;
 `
+
+export const ImageContainer = styled.View`
+    margin-left: 20px;
+    width: 60px;
+    margin-top: 50px;
+    border: 1px solid red;
+`
+
+export const DoctorContainer = styled.View`
+   flex: 1;
+   width: 100%;
+`
+

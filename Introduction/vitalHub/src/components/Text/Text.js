@@ -14,3 +14,14 @@ export const SubTextQuick = styled(TextQuick)`
     font-size: 14px;
     margin-bottom: 0px;
 `
+
+export const MontSerratWhite = styled.Text`
+    font-size: 16px;
+    font-family: 'MontserratAlternates_600SemiBold';
+    color: white;
+`
+
+export const UserText = styled.Text`
+    font-family: 'Quicksand_500Medium';
+    color: #4E4B59;
+`
