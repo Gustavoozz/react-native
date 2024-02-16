@@ -2,7 +2,7 @@
 import AppLoading from 'expo-app-loading';
 
 import { useFonts, MontserratAlternates_700Bold, MontserratAlternates_500Medium, MontserratAlternates_600SemiBold } from '@expo-google-fonts/montserrat-alternates';
-import { Quicksand_500Medium, Quicksand_600SemiBold } from '@expo-google-fonts/quicksand';
+import { Quicksand_500Medium, Quicksand_600SemiBold, Quicksand_400Regular } from '@expo-google-fonts/quicksand';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import { NavigationContainer } from '@react-navigation/native';
@@ -26,7 +26,8 @@ export default function App() {
     MontserratAlternates_500Medium,
     MontserratAlternates_600SemiBold,
     Quicksand_500Medium,
-    Quicksand_600SemiBold
+    Quicksand_600SemiBold,
+    Quicksand_400Regular
   });
 
 

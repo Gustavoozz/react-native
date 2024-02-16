@@ -83,5 +83,9 @@ export const ImageContainer = styled.View`
 export const DoctorContainer = styled.View`
    flex: 1;
    width: 100%;
+
 `
+
+
+
 

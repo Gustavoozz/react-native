@@ -27,3 +27,8 @@ export const NotificationBell = styled.Image`
     margin-left: 160px;
     margin-top: 60px;
 `
+
+export const Clock = styled.Image`
+    width: 14px;
+    height: 14px;
+`

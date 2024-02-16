@@ -1,10 +1,12 @@
 import { View } from "react-native"
-import { Container, DoctorContainer, HeaderHome, ImageContainer, InfoContainer, MedicoContainer, ViewButtons } from "../../components/Container/Style"
+import { CardTest, Container, DoctorContainer, HeaderHome, InfoContainer } from "../../components/Container/Style"
 import { NotificationBell, UserDoctor } from "../../components/Logo/Style"
-import { MontSerratWhite, SubTextQuick, UserText } from "../../components/Text/Text"
-import { ButtonTitle, Title, TitleUser } from "../../components/Title/Style"
+import { MontSerratWhite, UserText } from "../../components/Text/Text"
+import { ButtonTitle, Title } from "../../components/Title/Style"
+
 import CalendarStrip from 'react-native-calendar-strip'
 import { SelectButton, WhiteSelectButton } from "../../components/Button/Style"
+import { CardPaciente } from "../../components/CardPaciente/CardPaciente"
 
 export const MedicoConsultas = () => {
     return(
@@ -51,9 +53,24 @@ export const MedicoConsultas = () => {
            <WhiteSelectButton>
            <ButtonTitle style={{ textTransform: null, fontSize: 12, color: '#607EC5' }}>Canceladas</ButtonTitle>
            </WhiteSelectButton>   
-            </View>
+           </View>
+         
+            <CardPaciente
+            imagePatient={'https://github.com/Gustavoozz.png'}
+            patientName={"Gustavo"}
+            patientAge={"18 anos"}
+            appointmentType={"Endócrino"}
+            appointmentHour={"17:00"}
+            />
 
-            
+            <CardPaciente
+            imagePatient={'https://github.com/Gustavoozz.png'}
+            patientName={"Gustavo"}
+            patientAge={"18 anos"}
+            appointmentType={"Endócrino"}
+            appointmentHour={"17:00"}
+            />    
+ 
             
             </DoctorContainer>         
         </Container>
