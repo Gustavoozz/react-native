@@ -7,8 +7,7 @@ export const CardContainer = styled.View`
 `
 
 export const PatientContainer = styled.View`
-   width: 90%;
-
+   width: 95%;
    elevation: 10;
    background-color: white;
 
