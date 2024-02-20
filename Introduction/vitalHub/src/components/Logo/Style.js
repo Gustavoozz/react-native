@@ -31,4 +31,5 @@ export const NotificationBell = styled.Image`
 export const Clock = styled.Image`
     width: 14px;
     height: 14px;
+    color: ${(props) => props.situacao == "pendente" ? "#49B3BA" : "#4E4B59"};
 `

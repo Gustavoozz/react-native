@@ -17,6 +17,7 @@ export const PatientContainer = styled.View`
 
    align-items: center;
    padding: 10px;
+
 `
 
 export const CardConsulta = styled.View`
@@ -29,17 +30,23 @@ export const PatientPhoto = styled.Image`
     border-radius: 5px;
 `
 
+export const TitlePatient = styled.Text`
+    width: 300px;
+    font-family: "MontserratAlternates_600SemiBold";
+    font-size: 16px;
+    color: #33303E;
+    margin-top: 5px;
+    gap: 5px;
+`
+
 export const InfoConsulta = styled.View`
     width: 40%;
+    height: 94px;
     margin-left: 10px;
 `
 
 export const InfoPaciente = styled.View`
     width: 100%;
-    height: 30px;
-    align-items: center;
-
-    justify-content: center;
     flex-direction: row;
 `
 
@@ -57,21 +64,32 @@ export const Type = styled.Text`
 `
 
 export const HourButton = styled.TouchableOpacity`
-    border: 1px solid #E8FCFD;
-    background-color: #E8FCFD;
-    width: 80%;
-
+    background-color: ${(props) => props.situacao == "pendente" ? "#E8FCFD" : "#F1F0F5"};
+    width: 70%;
     height: 30px;
+
     border-radius: 5px;
     flex-direction: row;
+    margin-top: 7px;
 
     align-items: center;
     justify-content: center;
-    gap: 7px;
+    gap: 5px;
 `
 
 export const Hour = styled.Text`
-    color: #49B3BA;
+    color: ${(props) => props.situacao == "pendente" ? "#49B3BA" : "#4E4B59"};
     text-align: center;
     font-family: 'Quicksand_600SemiBold';
 `   
+
+export const CancelButton = styled.TouchableOpacity`
+    margin-top: 60px;
+    margin-left: 30px;
+`
+
+export const CancelTitle = styled.Text`
+    font-family: 'MontserratAlternates_500Medium';
+    font-size: 12px;
+    color: ${(props) => props.situacao == "pendente" ? "#C81D25" : "#344F8F"};
+`

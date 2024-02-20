@@ -13,10 +13,22 @@ import { CalendarHome } from "../../components/CalendarList/CalendarHome"
 import { ContainerButton } from "./Style"
 import { BtnListAppointment } from "../../components/BtnListAppointment/BtnListAppointment"
 import { useState } from "react"
+import { ListComponent } from "../../components/List/List"
 
 export const MedicoConsultas = () => {
 
-    const [statusLista, setStatusLista] = useState("pendente")
+    const [statusLista, setStatusLista] = useState("pendente");
+
+    const Consultas = [
+        { id: 1, nome: "Gustavo", situacao: "pendente" },
+        { id: 2, nome: "Gustavo", situacao: "realizado" },
+        { id: 3, nome: "Gustavo", situacao: "pendente" },
+        { id: 4, nome: "Gustavo", situacao: "realizado" },
+        { id: 5, nome: "Gustavo", situacao: "pendente" },
+        { id: 6, nome: "Gustavo", situacao: "realizado" },
+        { id: 7, nome: "Gustavo", situacao: "pendente" },
+    ];
+    
 
     return(
         <Container>
@@ -54,8 +66,8 @@ export const MedicoConsultas = () => {
              iconRight={false}
             /> */}
 
-            <ContainerButton>
-            <BtnListAppointment
+           <ContainerButton> 
+           <BtnListAppointment
             textButton={"Agendadas"}
             clickButton={statusLista === "pendente"}
             onPress={() => setStatusLista("pendente")}
@@ -71,7 +83,8 @@ export const MedicoConsultas = () => {
             textButton={"Canceladas"}
             clickButton={statusLista === "cancelado"}
             onPress={() => setStatusLista("cancelado")}
-            />
+            /> 
+    
             </ContainerButton>
             
              {/* <SelectButton>
@@ -85,23 +98,33 @@ export const MedicoConsultas = () => {
            <WhiteSelectButton>
            <ButtonTitle style={{ textTransform: null, fontSize: 12, color: '#607EC5' }}>Canceladas</ButtonTitle>
            </WhiteSelectButton>    */}
-
+            <ListComponent
+            data={Consultas}
+            keyExtractor={(item) => item.id}
+            renderItem={({item}) =>
+            statusLista == item.situacao && (
+                <CardPaciente
+                situacao={item.situacao}
+                />
+            )
+            }
+            />
          
-            <CardPaciente
+            {/* <CardPaciente
             imagePatient={'https://github.com/Gustavoozz.png'}
-            patientName={"Gustavo"}
-            patientAge={"18 anos"}
-            appointmentType={"Endócrino"}
+            patientName={"Gustavo Magalhães"}
+            patientAge={"19 anos"}
+            appointmentType={"Cardiologist"}
             appointmentHour={"17:00"}
             />
 
             <CardPaciente
             imagePatient={'https://github.com/Gustavoozz.png'}
-            patientName={"Gustavo"}
+            patientName={"Gustavo Nascimento"}
             patientAge={"18 anos"}
-            appointmentType={"Endócrino"}
-            appointmentHour={"17:00"}
-            />    
+            appointmentType={"Routine"}
+            appointmentHour={"19:00"}
+            />     */}
             
             </DoctorContainer>         
         </Container>
