@@ -14,21 +14,27 @@ import { ContainerButton } from "./Style"
 import { BtnListAppointment } from "../../components/BtnListAppointment/BtnListAppointment"
 import { useState } from "react"
 import { ListComponent } from "../../components/List/List"
+import { CancelationModal } from "../../components/CancelationModal/CancelationModal"
+import { AppointmentModal } from "../../components/AppointmentModal/AppointmentModal"
+
+const Consultas = [
+    { id: 1, nome: "Gustavo", situacao: "pendente" },
+    { id: 2, nome: "Gustavo", situacao: "realizado" },
+    { id: 3, nome: "Gustavo", situacao: "pendente" },
+    { id: 4, nome: "Gustavo", situacao: "realizado" },
+    { id: 5, nome: "Gustavo", situacao: "pendente" },
+
+];
 
 export const MedicoConsultas = () => {
 
-    const [statusLista, setStatusLista] = useState("pendente");
-
-    const Consultas = [
-        { id: 1, nome: "Gustavo", situacao: "pendente" },
-        { id: 2, nome: "Gustavo", situacao: "realizado" },
-        { id: 3, nome: "Gustavo", situacao: "pendente" },
-        { id: 4, nome: "Gustavo", situacao: "realizado" },
-        { id: 5, nome: "Gustavo", situacao: "pendente" },
-        { id: 6, nome: "Gustavo", situacao: "realizado" },
-        { id: 7, nome: "Gustavo", situacao: "pendente" },
-    ];
     
+    // State para o estado da lista ( Cards ).
+    const [statusLista, setStatusLista] = useState("pendente");
+    
+    // State para a exibição de modais.
+    const [showModalCancel, setShowModalCancel] = useState(false);
+    const [showModalAppointment, setShowModalAppointment] = useState(false);
 
     return(
         <Container>
@@ -66,7 +72,7 @@ export const MedicoConsultas = () => {
              iconRight={false}
             /> */}
 
-           <ContainerButton> 
+           <ContainerButton style={{ marginBottom: 20 }}> 
            <BtnListAppointment
             textButton={"Agendadas"}
             clickButton={statusLista === "pendente"}
@@ -105,9 +111,22 @@ export const MedicoConsultas = () => {
             statusLista == item.situacao && (
                 <CardPaciente
                 situacao={item.situacao}
+                onPressCancel={() => setShowModalCancel(true)}
+                onPressAppointment={() => setShowModalAppointment(true)}
                 />
             )
             }
+            showsVerticalScrollIndicator={false}
+            />
+
+            <CancelationModal
+            visible={showModalCancel}
+            setShowModalCancel={setShowModalCancel}
+            />
+
+            <AppointmentModal
+            visible={showModalAppointment}
+            setShowModalAppointment={setShowModalAppointment}
             />
          
             {/* <CardPaciente

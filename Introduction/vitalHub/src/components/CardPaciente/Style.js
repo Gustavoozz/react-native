@@ -4,20 +4,19 @@ export const CardContainer = styled.View`
     flex-shrink: 1;
     width: 100%;
     align-items: center;
+    margin-bottom: 20px;
 `
 
 export const PatientContainer = styled.View`
-   width: 95%;
-   elevation: 10;
+   width: 90%;
    background-color: white;
+   elevation: 5;
 
    border-radius: 5px;
-   margin-top: 30px; 
    flex-direction: row;
-
    align-items: center;
-   padding: 10px;
-
+   
+   padding: 10px; 
 `
 
 export const CardConsulta = styled.View`
@@ -85,7 +84,7 @@ export const Hour = styled.Text`
 
 export const CancelButton = styled.TouchableOpacity`
     margin-top: 60px;
-    margin-left: 30px;
+    margin-left: 20px;
 `
 
 export const CancelTitle = styled.Text`

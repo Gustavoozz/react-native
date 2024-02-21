@@ -36,11 +36,11 @@ export const CardPaciente = ({ imagePatient,
                         <>
                         </>
                     ) : situacao == "pendente" ? (
-                    <CancelButton>
+                    <CancelButton onPress={onPressCancel}>
                         <CancelTitle situacao={situacao}>Cancelar</CancelTitle>
                     </CancelButton>   
                     ) : (
-                    <CancelButton>
+                    <CancelButton onPress={onPressAppointment}>
                         <CancelTitle situacao={situacao}>Ver prontuário</CancelTitle>
                     </CancelButton>    
                     )

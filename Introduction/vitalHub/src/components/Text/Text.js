@@ -15,6 +15,11 @@ export const SubTextQuick = styled(TextQuick)`
     margin-bottom: 0px;
 `
 
+export const ModalQuick = styled(SubTextQuick)`
+    font-family: Quicksand_500Medium;
+    font-size: 12px;
+`
+
 export const MontSerratWhite = styled.Text`
     font-size: 16px;
     font-family: 'MontserratAlternates_600SemiBold';

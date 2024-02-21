@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
       textAlign: "center",
       alignSelf : 'flex-start',
       color : '#4E4B59',
-      fontFamily: "MontserratAlternates_600SemiBold",
+      fontFamily: 'MontserratAlternates_600SemiBold',
       paddingHorizontal: 16
     },
     nameDateStyle : {
