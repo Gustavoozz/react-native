@@ -33,3 +33,18 @@ export const Clock = styled.Image`
     height: 14px;
     color: ${(props) => props.situacao == "pendente" ? "#4E4B59" : "#49B3BA"};
 `
+
+export const AppointmentIcon = styled.Image`
+    width: 32px;
+    height: 32px;
+`
+
+export const CalendarIcon = styled.Image`
+    width: 10px;
+    height: 10px;
+`
+
+export const StarIcon = styled.Image`
+    width: 20px;
+    height: 20px;
+`
