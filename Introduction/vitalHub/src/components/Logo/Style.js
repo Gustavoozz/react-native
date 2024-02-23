@@ -48,3 +48,21 @@ export const StarIcon = styled.Image`
     width: 20px;
     height: 20px;
 `
+
+export const DoctorPicture = styled.Image`
+    width: 85px;
+    height: 90px;
+    border-radius: 5px;
+    margin-top: 10px;
+`
+
+export const MapClinic = styled.Image`
+    width: 100%;
+    height: 324px;
+`
+
+export const ModalDoctorPhoto = styled.Image`
+    width: 100%;
+    height: 201px;
+    border-radius: 10px;
+`

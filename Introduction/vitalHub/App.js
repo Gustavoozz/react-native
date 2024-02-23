@@ -17,6 +17,8 @@ import { MedicoConsultas } from './src/screens/MedicoConsultas/MedicoConsultas';
 import { Prontuario } from './src/screens/Prontuario/Prontuario';
 import { PacienteConsultas } from './src/screens/PacienteConsultas/PacienteConsultas';
 import { ClinicSelect } from './src/screens/ClinicSelect/ClinicSelect';
+import { DoctorSelect } from './src/screens/DoctorSelect/DoctorSelect';
+import { Localization } from './src/screens/Localization/Localization';
 
 
 const Stack = createNativeStackNavigator();
@@ -113,6 +115,18 @@ export default function App() {
             name="ClinicSelect"
             component={ClinicSelect}
             options={{title: "ClinicSelect"}}
+        />
+
+      <Stack.Screen
+            name="DoctorSelect"
+            component={DoctorSelect}
+            options={{title: "DoctorSelect"}}
+        />
+
+      <Stack.Screen
+            name="Localization"
+            component={Localization}
+            options={{title: "Localization"}}
         />
 
 

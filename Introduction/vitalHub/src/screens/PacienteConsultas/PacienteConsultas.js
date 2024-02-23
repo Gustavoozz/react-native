@@ -8,6 +8,8 @@ import { ContainerButton } from "../MedicoConsultas/Style"
 import { ListComponent } from "../../components/List/List"
 import { CardPaciente } from "../../components/CardPaciente/CardPaciente"
 import { ScheduleModal } from "../../components/ScheduleModal/ScheduleModal"
+import { NotificationModal } from "../../components/NotificationModal/NotificationModal"
+import { CancelationModal } from "../../components/CancelationModal/CancelationModal"
 
 
 const Consultas = [
@@ -20,6 +22,7 @@ export const PacienteConsultas = () => {
     const [ statusType, setStatusType ] = useState("Rotina");
     const [ showModalCancel, setShowModalCancel ] = useState(false);
     const [ showModalSchedule, setShowModalSchedule ] = useState(false);
+    const [ showModalNotification, setShowModalNotification ] = useState(true);
     
     return(
         <Container>
@@ -82,10 +85,20 @@ export const PacienteConsultas = () => {
                 />
             </AppointmentBox>
 
+            <CancelationModal
+            visible={showModalCancel}
+            setShowModalCancel={setShowModalCancel}
+            />
+
             <ScheduleModal
             visible={showModalSchedule}
             setShowModalCancel={setShowModalSchedule}
             />
+
+            <NotificationModal
+            visible={showModalNotification}
+            setShowModalNotification={setShowModalNotification}
+            />  
 
             </DoctorContainer>
         </Container>
