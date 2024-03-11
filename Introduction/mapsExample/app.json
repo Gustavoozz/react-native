@@ -1,13 +1,13 @@
 {
   "expo": {
-    "name": "vitalHub",
-    "slug": "vitalHub",
+    "name": "mapsExample",
+    "slug": "mapsExample",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/VitalHub_Splash.png",
+      "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
