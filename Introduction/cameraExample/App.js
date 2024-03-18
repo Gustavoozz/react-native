@@ -4,12 +4,14 @@ import { Camera, CameraType } from 'expo-camera';
 import { useEffect, useState, useRef } from 'react';
 import { FontAwesome } from '@expo/vector-icons'
 import * as MediaLibrary from 'expo-media-library'
+import { Entypo } from '@expo/vector-icons';
 
 export default function App() {
   const cameraRef = useRef(null);
   const [ photo, setPhoto ] = useState(null);
   const [ openModal, setOpenModal ] = useState(false);
   const [ tipoCamera, setTipoCamera ] = useState(CameraType.front);
+  const [ flash, setFlash ] = useState(Camera.Constants.FlashMode.off);
 
   useEffect(() => {
     ( async () => {
@@ -52,11 +54,17 @@ export default function App() {
       style={ styles.camera }
       type={ tipoCamera }
       ratio='16:9'
+      flashMode={this.state.flashMode? Camera.Constants.FlashMode.torch : Camera.Constants.FlashMode.off}
       >
       <View style={ styles.viewFlip }>
       <TouchableOpacity style={ styles.btnFlip} onPress={() => setTipoCamera( tipoCamera == CameraType.front ? CameraType.back : CameraType.front)}>
       <Text style={ styles.txtFlip }>Switch</Text>   
       </TouchableOpacity>
+
+      <TouchableOpacity style={ styles.btnFlash } onPress={() => this.setState({flashMode: !this.state.flashMode})} >
+      <Entypo name="flash" size={35} color="black" />
+      </TouchableOpacity>
+
       </View>
       </Camera>
 
@@ -76,7 +84,6 @@ export default function App() {
       <TouchableOpacity style={ styles.btnUpload } onPress={() => UploadPhoto()}>
       <FontAwesome name='upload' size={35} color='#121212`'/>
       </TouchableOpacity>
-
       
       </View>
 
@@ -147,4 +154,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+
+  btnFlash: {
+    padding: 20,
+    backgroundColor: 'transparent',
+
+    justifyContent: 'center',
+    alignItems: 'center',
+  }
 });
